@@ -1,5 +1,4 @@
   const express = require('express'),
-  keep_alive = require("./keep_alive"),
   app = express(),
   http = require('http'),
   https = require('https'),
