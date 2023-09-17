@@ -48,7 +48,7 @@ function createNewTab() {
 	newTabContainer.classList.add('iframe-container', 'active');
 	newTabContainer.id = tabId;
 	newTabContainer.innerHTML = `
-    <iframe onload="iframeUpdated()" src="http://192.168.1.101:8080/proxy/${searchUrl}/"></iframe>
+    <iframe onload="iframeUpdated()" src="https://browser.styles.gq/proxy/${searchUrl}/"></iframe>
   `;
 	iframelist.appendChild(newTabContainer);
 
@@ -112,10 +112,10 @@ function performSearchAndLoadIframe(tabId, searchQuery, search) {
 	searchUrl = localStorage.getItem("searchUrl")
 	const iframe = iframeContainer.querySelector('iframe');
 	if (isValidHttpUrl(search) != false) {
-		const SearchURL = `http://192.168.1.101:8080/proxy/${btoa(search)}`
+		const SearchURL = `https://browser.styles.gq/proxy/${btoa(search)}`
 		iframe.src = SearchURL
 	} else {
-		const googleSearchURL = `http://192.168.1.101:8080/proxy/${searchUrl}/search?q=${searchQuery}`;
+		const googleSearchURL = `https://browser.styles.gq/proxy/${searchUrl}/search?q=${searchQuery}`;
 		iframe.src = googleSearchURL;
 	}
 	updateLocalStorage()
